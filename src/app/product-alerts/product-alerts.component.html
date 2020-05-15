@@ -1,0 +1,17 @@
+<p>
+product-alerts works!
+</p>
+  <h3>
+    <a [title]="product.name+ ' details'" [routerLink]="['/products',product.id]">
+      {{ product.name }}
+      </a>
+      
+  </h3>
+  <p *ngIf="product.description">
+   Description : {{product.description}}
+
+</p>
+<button (click)="share()">share</button>
+<p *ngIf="product.price>700">
+  <button (click)="notify.emit()">Notify</button>
+</p>
